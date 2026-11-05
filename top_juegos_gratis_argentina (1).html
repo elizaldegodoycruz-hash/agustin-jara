@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 3 Juegos Gratis Más Populares en Argentina</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#05060E',
+              purple: '#EB145F',
+              pink: '#C72BAF',
+              card: 'rgba(15, 18, 38, 0.75)',
+              glow: 'rgba(235, 20, 95, 0.25)'
+            }
+          },
+          fontFamily: {
+            title: ['"Jersey 10"', 'sans-serif'],
+            body: ['"Libre Baskerville"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Jersey 10 & Libre Baskerville -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS for Glow Effects & Polish -->
+  <style>
+    body {
+      background-color: #05060E;
+      color: #E2E8F0;
+      font-family: 'Libre Baskerville', serif;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, .font-jersey {
+      font-family: 'Jersey 10', cursive, sans-serif;
+      letter-spacing: 0.05em;
+    }
+
+    .neon-border-purple {
+      border: 1px solid rgba(235, 20, 95, 0.4);
+      box-shadow: 0 0 15px rgba(235, 20, 95, 0.2);
+    }
+
+    .neon-border-pink {
+      border: 1px solid rgba(199, 43, 175, 0.4);
+      box-shadow: 0 0 15px rgba(199, 43, 175, 0.2);
+    }
+
+    .neon-text-purple {
+      text-shadow: 0 0 10px rgba(235, 20, 95, 0.6);
+    }
+
+    .neon-text-pink {
+      text-shadow: 0 0 10px rgba(199, 43, 175, 0.6);
+    }
+
+    .glass-panel {
+      background: rgba(15, 18, 38, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .game-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .game-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(235, 20, 95, 0.3);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #05060E;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #EB145F;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C72BAF;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#C72BAF] selection:text-white">
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-50 glass-panel border-b border-white/10 px-4 lg:px-8 py-3">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-[#EB145F] rounded-lg p-1">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#EB145F] to-[#C72BAF] flex items-center justify-center text-white font-bold text-2xl shadow-lg group-hover:scale-105 transition-transform">
+          🎮
+        </div>
+        <div>
+          <span class="text-3xl font-jersey text-white tracking-wider block leading-none">AR Gaming</span>
+          <span class="text-[10px] text-gray-400 uppercase tracking-widest block font-sans">Fenómenos Móviles</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#free-fire" class="text-gray-300 hover:text-[#EB145F] transition-colors flex items-center gap-1.5 py-1 px-3 rounded-md hover:bg-white/5">
+          <!-- Free Fire Logo Icon -->
+          <svg class="w-5 h-5 text-[#EB145F]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C10.5 5 11 7.5 9 9C7.5 10.2 5.5 10 4 12C2.2 14.4 2 17.5 3.8 20C5.5 22.3 8.7 23 11.5 22.5C15.8 21.8 19 18.5 19.8 14.2C20.5 10.5 18.8 6.8 15.5 5C14.8 7 13.5 8.2 12.5 8.5C12.8 6 13 4 12 2ZM11 14C12.7 14 14 15.3 14 17C14 18.7 12.3 19.8 10.8 19.4C9.5 19.1 8.6 18 8.8 16.7C9 15.1 10 14 11 14Z"/>
+          </svg> Free Fire
+        </a>
+        <a href="#roblox" class="text-gray-300 hover:text-[#EB145F] transition-colors flex items-center gap-1.5 py-1 px-3 rounded-md hover:bg-white/5">
+          <!-- Roblox Logo Icon -->
+          <svg class="w-4 h-4 text-[#C72BAF]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.5 0L24 18.5L5.5 24L0 5.5L18.5 0ZM13.8 10.2L10.2 11.3L11.3 14.9L14.9 13.8L13.8 10.2Z"/>
+          </svg> Roblox
+        </a>
+        <a href="#brawl-stars" class="text-gray-300 hover:text-[#EB145F] transition-colors flex items-center gap-1.5 py-1 px-3 rounded-md hover:bg-white/5">
+          <!-- Brawl Stars Logo Icon -->
+          <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 1.5L14.8 7.2L21 8.1L16.5 12.5L17.6 18.7L12 15.8L6.4 18.7L7.5 12.5L3 8.1L9.2 7.2L12 1.5Z"/>
+          </svg> Brawl Stars
+        </a>
+        <a href="#comparativa" class="bg-gradient-to-r from-[#EB145F] to-[#C72BAF] text-white px-4 py-2 rounded-lg font-bold font-jersey text-xl hover:opacity-90 transition-opacity shadow-md">
+          Comparativa
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" aria-label="Abrir menú de navegación" class="md:hidden p-2 rounded-lg bg-white/5 hover:bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-[#EB145F]">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden mt-3 pt-3 border-t border-white/10 flex flex-col gap-2">
+      <a href="#free-fire" class="mobile-nav-link text-gray-200 hover:text-[#EB145F] p-2 rounded-lg hover:bg-white/5 flex items-center gap-2">
+        <span>🔥</span> Garena Free Fire
+      </a>
+      <a href="#roblox" class="mobile-nav-link text-gray-200 hover:text-[#EB145F] p-2 rounded-lg hover:bg-white/5 flex items-center gap-2">
+        <span>🧱</span> Roblox
+      </a>
+      <a href="#brawl-stars" class="mobile-nav-link text-gray-200 hover:text-[#EB145F] p-2 rounded-lg hover:bg-white/5 flex items-center gap-2">
+        <span>⭐</span> Brawl Stars
+      </a>
+      <a href="#comparativa" class="mobile-nav-link text-center bg-gradient-to-r from-[#EB145F] to-[#C72BAF] text-white p-2 rounded-lg font-jersey text-xl">
+        Ver Comparativa
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative py-16 lg:py-24 px-4 overflow-hidden">
+    <!-- Neon Background Accents -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#EB145F] opacity-20 blur-[120px] rounded-full pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-80 h-80 bg-[#C72BAF] opacity-15 blur-[100px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#EB145F]/40 bg-[#EB145F]/10 text-[#EB145F] text-sm font-sans mb-6">
+        <i data-lucide="trending-up" class="w-4 h-4"></i> Tendencia Gamer en Argentina
+      </div>
+      
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-jersey text-white mb-6 leading-none">
+        LOS 3 JUEGOS GRATIS MÁS POPULARES
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
+        Un análisis detallado sobre los títulos móviles y multiplataforma que conquistan las pantallas de millones de jóvenes argentinos. Battle royale, universos UGC y acción frenética.
+      </p>
+
+      <!-- Quick Jump Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        
+        <a href="#free-fire" class="glass-panel p-4 rounded-xl border border-white/10 hover:border-[#EB145F] transition-all flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#EB145F]/20 flex items-center justify-center p-2 border border-[#EB145F]/40 shrink-0">
+              <svg class="w-full h-full text-[#EB145F]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C10.5 5 11 7.5 9 9C7.5 10.2 5.5 10 4 12C2.2 14.4 2 17.5 3.8 20C5.5 22.3 8.7 23 11.5 22.5C15.8 21.8 19 18.5 19.8 14.2C20.5 10.5 18.8 6.8 15.5 5C14.8 7 13.5 8.2 12.5 8.5C12.8 6 13 4 12 2Z"/>
+              </svg>
+            </div>
+            <div class="text-left">
+              <h2 class="text-2xl font-jersey text-white group-hover:text-[#EB145F] transition-colors">Free Fire</h2>
+              <p class="text-xs text-gray-400 font-sans">Battle Royale • Partidas de 10 min</p>
+            </div>
+          </div>
+          <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-[#EB145F] group-hover:translate-x-1 transition-all"></i>
+        </a>
+
+        <a href="#roblox" class="glass-panel p-4 rounded-xl border border-white/10 hover:border-[#C72BAF] transition-all flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-[#C72BAF]/20 flex items-center justify-center p-2 border border-[#C72BAF]/40 shrink-0">
+              <svg class="w-full h-full text-[#C72BAF]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.5 0L24 18.5L5.5 24L0 5.5L18.5 0ZM13.8 10.2L10.2 11.3L11.3 14.9L14.9 13.8L13.8 10.2Z"/>
+              </svg>
+            </div>
+            <div class="text-left">
+              <h2 class="text-2xl font-jersey text-white group-hover:text-[#C72BAF] transition-colors">Roblox</h2>
+              <p class="text-xs text-gray-400 font-sans">Mundos Virtuales • UGC</p>
+            </div>
+          </div>
+          <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-[#C72BAF] group-hover:translate-x-1 transition-all"></i>
+        </a>
+
+        <a href="#brawl-stars" class="glass-panel p-4 rounded-xl border border-white/10 hover:border-[#EB145F] transition-all flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center p-2 border border-amber-500/40 shrink-0">
+              <svg class="w-full h-full text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 1.5L14.8 7.2L21 8.1L16.5 12.5L17.6 18.7L12 15.8L6.4 18.7L7.5 12.5L3 8.1L9.2 7.2L12 1.5Z"/>
+              </svg>
+            </div>
+            <div class="text-left">
+              <h2 class="text-2xl font-jersey text-white group-hover:text-[#EB145F] transition-colors">Brawl Stars</h2>
+              <p class="text-xs text-gray-400 font-sans">MOBA Casual • 2-3 min</p>
+            </div>
+          </div>
+          <i data-lucide="arrow-right" class="w-5 h-5 text-gray-400 group-hover:text-[#EB145F] group-hover:translate-x-1 transition-all"></i>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="max-w-7xl mx-auto px-4 lg:px-8 py-8 space-y-20">
+
+    <!-- GAME 1: GARENA FREE FIRE -->
+    <article id="free-fire" class="glass-panel rounded-3xl p-6 md:p-10 relative overflow-hidden border border-white/10 shadow-2xl">
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#EB145F] opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Badge Header -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
+        <div class="flex items-center gap-4">
+          <!-- Free Fire Custom Logo Badge -->
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-[#EB145F] to-orange-600 rounded-2xl flex items-center justify-center p-3 shadow-lg shadow-[#EB145F]/30 border border-white/20 shrink-0">
+            <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C10.5 5 11 7.5 9 9C7.5 10.2 5.5 10 4 12C2.2 14.4 2 17.5 3.8 20C5.5 22.3 8.7 23 11.5 22.5C15.8 21.8 19 18.5 19.8 14.2C20.5 10.5 18.8 6.8 15.5 5C14.8 7 13.5 8.2 12.5 8.5C12.8 6 13 4 12 2ZM11 14C12.7 14 14 15.3 14 17C14 18.7 12.3 19.8 10.8 19.4C9.5 19.1 8.6 18 8.8 16.7C9 15.1 10 14 11 14Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-[#EB145F] font-jersey text-2xl tracking-widest uppercase">#1 Rey Móvil en Argentina</span>
+            <h2 class="text-4xl md:text-6xl font-jersey text-white leading-tight">Garena Free Fire</h2>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-sans text-gray-300">📱 Android / iOS</span>
+          <span class="px-3 py-1 bg-[#EB145F]/20 text-[#EB145F] rounded-lg text-xs font-sans border border-[#EB145F]/30">Gama Baja/Media</span>
+        </div>
+      </div>
+
+      <!-- Overview Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+        <div class="lg:col-span-2 space-y-4">
+          <h3 class="text-3xl font-jersey text-[#EB145F]">¿Por qué es un fenómeno masivo en el país?</h3>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Es un fenómeno masivo e indiscutido en la Argentina, especialmente popular por funcionar de manera fluida incluso en teléfonos celulares de gama baja o media. Sus partidas rápidas de battle royale lo convierten en el favorito indiscutido de millones de jóvenes en el país.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+              <div class="flex items-center gap-2 text-[#C72BAF] font-bold mb-1">
+                <i data-lucide="clock" class="w-4 h-4"></i> Duración Corta
+              </div>
+              <p class="text-sm text-gray-300">Partidas intensas de aproximadamente 10 minutos, ideales para jugar en cualquier momento.</p>
+            </div>
+            <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+              <div class="flex items-center gap-2 text-[#EB145F] font-bold mb-1">
+                <i data-lucide="users" class="w-4 h-4"></i> Sistema de Personajes
+              </div>
+              <p class="text-sm text-gray-300">Decenas de héroes seleccionables (Alok, Chrono, Kelly, Hayato) con habilidades tácticas únicas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gameplay Summary Card -->
+        <div class="bg-gradient-to-br from-[#EB145F]/10 to-[#C72BAF]/10 p-6 rounded-2xl border border-[#EB145F]/30 flex flex-col justify-between">
+          <div>
+            <h4 class="text-2xl font-jersey text-white mb-3 flex items-center gap-2">
+              <i data-lucide="gamepad-2" class="w-5 h-5 text-[#EB145F]"></i> ¿Cómo se juega?
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li class="flex items-start gap-2">
+                <span class="text-[#EB145F] font-bold">•</span> Hasta 50 jugadores caen en paracaídas sobre una isla remota.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#EB145F] font-bold">•</span> Buscar armas, equipamiento médico y protección (cascos/chalecos).
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#EB145F] font-bold">•</span> La zona segura se reduce constantemente.
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-[#EB145F] font-bold">•</span> ¡El último jugador o escuadra en pie gana la partida (<strong>Booyah!</strong>)!
+              </li>
+            </ul>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-gray-400">
+            Versión mejorada: <strong class="text-white">Free Fire MAX</strong> con gráficos avanzados.
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabbed Section: Modos, Armas, Personalización -->
+      <div class="bg-black/30 rounded-2xl p-6 border border-white/5">
+        <h3 class="text-3xl font-jersey text-white mb-4">Detalles del Juego</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Modos -->
+          <div class="space-y-3">
+            <h4 class="text-2xl font-jersey text-[#C72BAF] flex items-center gap-2">
+              <span>🏝️</span> Modos de Juego
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li class="bg-white/5 p-2.5 rounded-lg border border-white/5">
+                <strong class="text-white block">Battle Royale</strong> El modo clásico de supervivencia hasta 50 jugadores.
+              </li>
+              <li class="bg-white/5 p-2.5 rounded-lg border border-white/5">
+                <strong class="text-white block">Duelo de Escuadras</strong> Dos equipos compiten en intensas rondas cortas.
+              </li>
+              <li class="bg-white/5 p-2.5 rounded-lg border border-white/5">
+                <strong class="text-white block">Eventos Temporales</strong> Modalidades especiales que cambian constantemente.
+              </li>
+            </ul>
+          </div>
+
+          <!-- Armas -->
+          <div class="space-y-3">
+            <h4 class="text-2xl font-jersey text-[#EB145F] flex items-center gap-2">
+              <span>🔫</span> Arsenal de Armas
+            </h4>
+            <p class="text-xs text-gray-400">Variedad con distintas estadísticas de daño, alcance y precisión:</p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/10 text-gray-200">Rifles de Asalto</span>
+              <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/10 text-gray-200">Escopetas</span>
+              <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/10 text-gray-200">Subfusiles</span>
+              <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/10 text-gray-200">Francotiradores</span>
+              <span class="px-3 py-1.5 bg-white/5 rounded-lg border border-white/10 text-gray-200">Granadas & Especiales</span>
+            </div>
+          </div>
+
+          <!-- Customization & Esports -->
+          <div class="space-y-3">
+            <h4 class="text-2xl font-jersey text-[#C72BAF] flex items-center gap-2">
+              <span>🎨</span> Personalización & Esports
+            </h4>
+            <p class="text-sm text-gray-300">
+              Amplio sistema de cosméticos: Skins de personajes, trajes, mochilas, vehículos y diseños de armas.
+            </p>
+            <div class="p-3 bg-[#EB145F]/10 rounded-xl border border-[#EB145F]/20 text-xs text-gray-300">
+              🏆 Cuenta con torneos competitivos de Esports consolidados en toda Latinoamérica.
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- GAME 2: ROBLOX -->
+    <article id="roblox" class="glass-panel rounded-3xl p-6 md:p-10 relative overflow-hidden border border-white/10 shadow-2xl">
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#C72BAF] opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Badge Header -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
+        <div class="flex items-center gap-4">
+          <!-- Roblox Custom Logo Badge -->
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-[#C72BAF] to-indigo-600 rounded-2xl flex items-center justify-center p-3 shadow-lg shadow-[#C72BAF]/30 border border-white/20 shrink-0">
+            <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.5 0L24 18.5L5.5 24L0 5.5L18.5 0ZM13.8 10.2L10.2 11.3L11.3 14.9L14.9 13.8L13.8 10.2Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-[#C72BAF] font-jersey text-2xl tracking-widest uppercase">#2 Metaverso & Creación</span>
+            <h2 class="text-4xl md:text-6xl font-jersey text-white leading-tight">Roblox</h2>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-sans text-gray-300">📱 Android / iOS</span>
+          <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-sans text-gray-300">💻 PC / Xbox / VR</span>
+        </div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+        <div class="lg:col-span-2 space-y-4">
+          <h3 class="text-3xl font-jersey text-[#C72BAF]">Mundos Virtuales e Imaginación Infinita</h3>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Plataforma de mundos virtuales y minijuegos con una adopción descomunal en celulares y computadoras, siendo el punto de encuentro diario para los más jóvenes en Argentina.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+              <h4 class="font-bold text-white text-base mb-1 flex items-center gap-2">
+                <i data-lucide="code" class="w-4 h-4 text-[#C72BAF]"></i> Contenido UGC
+              </h4>
+              <p class="text-sm text-gray-300">Casi todo dentro de Roblox ha sido creado por la propia comunidad y estudios independientes.</p>
+            </div>
+            <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+              <h4 class="font-bold text-white text-base mb-1 flex items-center gap-2">
+                <i data-lucide="coins" class="w-4 h-4 text-[#EB145F]"></i> Moneda: Robux
+              </h4>
+              <p class="text-sm text-gray-300">Permite adquirir ropa, accesorios únicos y ventajas exclusivas dentro de los mapas.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Roblox Popular Experiences -->
+        <div class="bg-gradient-to-br from-[#C72BAF]/10 to-[#EB145F]/10 p-6 rounded-2xl border border-[#C72BAF]/30">
+          <h4 class="text-2xl font-jersey text-white mb-3 flex items-center gap-2">
+            <span>🔥</span> Experiencias Populares
+          </h4>
+          <div class="space-y-2">
+            <div class="flex items-center justify-between p-2 rounded-lg bg-white/5 text-sm">
+              <span class="text-gray-200">🐾 Adopt Me!</span>
+              <span class="text-xs text-gray-400">Mascotas & Rol</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-white/5 text-sm">
+              <span class="text-gray-200">🏡 Brookhaven RP</span>
+              <span class="text-xs text-gray-400">Simulación Social</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-white/5 text-sm">
+              <span class="text-gray-200">🍎 Blox Fruits</span>
+              <span class="text-xs text-gray-400">Acción & Anime</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-white/5 text-sm">
+              <span class="text-gray-200">🏫 Royale High</span>
+              <span class="text-xs text-gray-400">Fantasía & Moda</span>
+            </div>
+            <div class="flex items-center justify-between p-2 rounded-lg bg-white/5 text-sm">
+              <span class="text-gray-200">🐷 Piggy</span>
+              <span class="text-xs text-gray-400">Terror & Escape</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Studio & Creation Note -->
+      <div class="p-4 rounded-xl bg-white/5 border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <i data-lucide="wrench" class="w-8 h-8 text-[#EB145F] shrink-0"></i>
+          <div>
+            <h4 class="text-xl font-jersey text-white">¿Te gusta crear?</h4>
+            <p class="text-xs text-gray-300">Con <strong>Roblox Studio</strong> podés diseñar tus propios mapas, ropa y mecánicas de juego.</p>
+          </div>
+        </div>
+        <span class="text-xs px-3 py-1.5 bg-[#EB145F]/20 text-[#EB145F] rounded-lg border border-[#EB145F]/40 whitespace-nowrap">
+          Comunidad Activa
+        </span>
+      </div>
+    </article>
+
+    <!-- GAME 3: BRAWL STARS -->
+    <article id="brawl-stars" class="glass-panel rounded-3xl p-6 md:p-10 relative overflow-hidden border border-white/10 shadow-2xl">
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-[#EB145F] opacity-10 rounded-full blur-3xl pointer-events-none"></div>
+
+      <!-- Badge Header -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b border-white/10">
+        <div class="flex items-center gap-4">
+          <!-- Brawl Stars Custom Logo Badge -->
+          <div class="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-amber-400 to-[#EB145F] rounded-2xl flex items-center justify-center p-3 shadow-lg shadow-amber-500/20 border border-white/20 shrink-0">
+            <svg class="w-full h-full text-white" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 1.5L14.8 7.2L21 8.1L16.5 12.5L17.6 18.7L12 15.8L6.4 18.7L7.5 12.5L3 8.1L9.2 7.2L12 1.5Z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-[#EB145F] font-jersey text-2xl tracking-widest uppercase">#3 MOBA Casual & Frenético</span>
+            <h2 class="text-4xl md:text-6xl font-jersey text-white leading-tight">Brawl Stars</h2>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <span class="px-3 py-1 bg-white/10 rounded-lg text-xs font-sans text-gray-300">📱 Android / iOS</span>
+          <span class="px-3 py-1 bg-[#C72BAF]/20 text-[#C72BAF] rounded-lg text-xs font-sans border border-[#C72BAF]/30">Desarrollador: Supercell</span>
+        </div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-10">
+        <div class="lg:col-span-2 space-y-4">
+          <h3 class="text-3xl font-jersey text-[#EB145F]">Acción Rápida e Intensa</h3>
+          <p class="text-gray-300 text-base leading-relaxed">
+            Este título multijugador mantiene una comunidad sumamente activa en la región (especialmente entre jugadores de 10 a 25 años), impulsada por creadores de contenido y torneos competitivos de Supercell.
+          </p>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+            <div class="bg-white/5 p-3 rounded-xl border border-white/5 text-center">
+              <span class="text-3xl font-jersey text-[#EB145F] block">2-3 MIN</span>
+              <span class="text-xs text-gray-300">Duración promedio por partida</span>
+            </div>
+            <div class="bg-white/5 p-3 rounded-xl border border-white/5 text-center">
+              <span class="text-3xl font-jersey text-[#C72BAF] block">3v3 & Solo</span>
+              <span class="text-xs text-gray-300">Modalidades de combate</span>
+            </div>
+            <div class="bg-white/5 p-3 rounded-xl border border-white/5 text-center">
+              <span class="text-3xl font-jersey text-white block">Trofeos</span>
+              <span class="text-xs text-gray-300">Sistema de progreso competitivo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brawlers Classes Card -->
+        <div class="bg-gradient-to-br from-[#EB145F]/10 to-[#C72BAF]/10 p-6 rounded-2xl border border-[#EB145F]/30">
+          <h4 class="text-2xl font-jersey text-white mb-3 flex items-center gap-2">
+            <i data-lucide="shield" class="w-5 h-5 text-[#EB145F]"></i> Clases de Brawlers
+          </h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#EB145F]"></span> <strong>Tanques:</strong> Mucha vida para resistir daño.
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#C72BAF]"></span> <strong>Francotiradores:</strong> Ataque a largo alcance.
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#EB145F]"></span> <strong>Asesinos:</strong> Rápidos y de alto impacto.
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#C72BAF]"></span> <strong>Soportes:</strong> Curación y apoyo al equipo.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Game Modes Grid -->
+      <div class="bg-black/30 p-6 rounded-2xl border border-white/5">
+        <h3 class="text-3xl font-jersey text-white mb-4">Modos de Juego Destacados</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+            <div class="text-2xl mb-1">💎</div>
+            <h4 class="font-jersey text-2xl text-white">Atrapagemas</h4>
+            <p class="text-xs text-gray-300">Recolectar y mantener 10 gemas en equipo antes que el rival.</p>
+          </div>
+
+          <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+            <div class="text-2xl mb-1">⭐</div>
+            <h4 class="font-jersey text-2xl text-white">Caza Estelar</h4>
+            <p class="text-xs text-gray-300">Eliminar enemigos para sumar estrellas en el marcador.</p>
+          </div>
+
+          <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+            <div class="text-2xl mb-1">⚽</div>
+            <h4 class="font-jersey text-2xl text-white">Brawl Ball</h4>
+            <p class="text-xs text-gray-300">Una especie de fútbol lleno de habilidades y disparos.</p>
+          </div>
+
+          <div class="bg-white/5 p-4 rounded-xl border border-white/5">
+            <div class="text-2xl mb-1">👑</div>
+            <h4 class="font-jersey text-2xl text-white">Supervivencia</h4>
+            <p class="text-xs text-gray-300">Todos contra todos (Showdown) en solitario o en dúos.</p>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- COMPARISON TABLE SECTION -->
+    <section id="comparativa" class="glass-panel rounded-3xl p-6 md:p-10 border border-white/10 shadow-2xl">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <h2 class="text-4xl md:text-5xl font-jersey text-white">TABLA COMPARATIVA</h2>
+        <p class="text-gray-300 text-sm">Resumen rápido de características clave de los tres gigantes móviles en Argentina.</p>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm text-gray-300">
+          <thead class="text-xs uppercase bg-white/5 text-[#EB145F] border-b border-white/10 font-sans">
+            <tr>
+              <th scope="col" class="px-6 py-4">Juego</th>
+              <th scope="col" class="px-6 py-4">Género</th>
+              <th scope="col" class="px-6 py-4">Duración Partida</th>
+              <th scope="col" class="px-6 py-4">Rendimiento en Celulares</th>
+              <th scope="col" class="px-6 py-4">Público Clave</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5 font-sans">
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#EB145F]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C10.5 5 11 7.5 9 9C7.5 10.2 5.5 10 4 12C2.2 14.4 2 17.5 3.8 20C5.5 22.3 8.7 23 11.5 22.5C15.8 21.8 19 18.5 19.8 14.2C20.5 10.5 18.8 6.8 15.5 5C14.8 7 13.5 8.2 12.5 8.5C12.8 6 13 4 12 2Z"/>
+                </svg>
+                Free Fire
+              </td>
+              <td class="px-6 py-4">Battle Royale</td>
+              <td class="px-6 py-4">~ 10 min</td>
+              <td class="px-6 py-4"><span class="text-green-400 font-semibold">Excelente</span> (Gama Baja/Media)</td>
+              <td class="px-6 py-4">Jóvenes / Escuadras</td>
+            </tr>
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
+                <svg class="w-4 h-4 text-[#C72BAF]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.5 0L24 18.5L5.5 24L0 5.5L18.5 0ZM13.8 10.2L10.2 11.3L11.3 14.9L14.9 13.8L13.8 10.2Z"/>
+                </svg>
+                Roblox
+              </td>
+              <td class="px-6 py-4">Metaverso / Sandbox / UGC</td>
+              <td class="px-6 py-4">Variable</td>
+              <td class="px-6 py-4"><span class="text-yellow-400 font-semibold">Bueno</span> (Según la experiencia)</td>
+              <td class="px-6 py-4">Niños / Creadores</td>
+            </tr>
+            <tr class="hover:bg-white/5 transition-colors">
+              <td class="px-6 py-4 font-bold text-white flex items-center gap-2">
+                <svg class="w-4 h-4 text-amber-400" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 1.5L14.8 7.2L21 8.1L16.5 12.5L17.6 18.7L12 15.8L6.4 18.7L7.5 12.5L3 8.1L9.2 7.2L12 1.5Z"/>
+                </svg>
+                Brawl Stars
+              </td>
+              <td class="px-6 py-4">MOBA Casual / Acción</td>
+              <td class="px-6 py-4">2 - 3 min</td>
+              <td class="px-6 py-4"><span class="text-green-400 font-semibold">Muy Bueno</span> (Optimizado)</td>
+              <td class="px-6 py-4">10 a 25 años / Esports</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE QUIZ / FINDER -->
+    <section class="glass-panel rounded-3xl p-6 md:p-10 border border-[#EB145F]/30 bg-gradient-to-r from-[#EB145F]/10 to-[#C72BAF]/10 text-center">
+      <h2 class="text-4xl md:text-5xl font-jersey text-white mb-2">¿CUÁL DEBERÍAS JUGAR HOY?</h2>
+      <p class="text-gray-300 text-sm max-w-xl mx-auto mb-6">Haz clic según tus preferencias para encontrar tu juego ideal en segundos:</p>
+
+      <div class="flex flex-wrap justify-center gap-3 mb-8" id="quiz-options">
+        <button onclick="recommendGame('fast')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-[#EB145F] text-white font-medium text-sm transition-all border border-white/10">
+          ⚡ Partidas ultrarrápidas (2-3 min)
+        </button>
+        <button onclick="recommendGame('friends')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-[#EB145F] text-white font-medium text-sm transition-all border border-white/10">
+          🎯 Battle Royale en equipo
+        </button>
+        <button onclick="recommendGame('create')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-[#C72BAF] text-white font-medium text-sm transition-all border border-white/10">
+          🎨 Crear mundos y socializar
+        </button>
+        <button onclick="recommendGame('low-spec')" class="px-4 py-2 rounded-xl bg-white/10 hover:bg-[#EB145F] text-white font-medium text-sm transition-all border border-white/10">
+          📲 Tengo celular gama baja
+        </button>
+      </div>
+
+      <div id="quiz-result" class="hidden p-6 rounded-2xl bg-black/50 border border-white/10 max-w-xl mx-auto transition-all">
+        <!-- Dynamic Result Rendered Here -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 mt-20 bg-[#05060E] py-8 px-4 text-center text-xs text-gray-500">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-2xl font-jersey text-white">AR GAMING</span>
+        <span class="text-gray-600">| Información sobre Tendencias Gamer en Argentina</span>
+      </div>
+      <p>© 2026 Portal Informativo. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Quiz Recommendation Logic
+    function recommendGame(type) {
+      const resultBox = document.getElementById('quiz-result');
+      resultBox.classList.remove('hidden');
+
+      let content = '';
+
+      if (type === 'fast') {
+        content = `
+          <div class="text-3xl mb-2">⭐</div>
+          <h3 class="text-3xl font-jersey text-[#EB145F]">Tu juego ideal: Brawl Stars</h3>
+          <p class="text-sm text-gray-300 mt-2">Partidas de 2 a 3 minutos repletas de acción 3v3 con una enorme variedad de Brawlers.</p>
+          <a href="#brawl-stars" class="inline-block mt-4 text-xs bg-[#EB145F] text-white px-4 py-2 rounded-lg font-bold">Ver más detalles</a>
+        `;
+      } else if (type === 'friends') {
+        content = `
+          <div class="text-3xl mb-2">🔥</div>
+          <h3 class="text-3xl font-jersey text-[#EB145F]">Tu juego ideal: Garena Free Fire</h3>
+          <p class="text-sm text-gray-300 mt-2">Arma tu escuadra, cae en la isla y busca el Booyah! en partidas dinámicas de 10 minutos.</p>
+          <a href="#free-fire" class="inline-block mt-4 text-xs bg-[#EB145F] text-white px-4 py-2 rounded-lg font-bold">Ver más detalles</a>
+        `;
+      } else if (type === 'create') {
+        content = `
+          <div class="text-3xl mb-2">🧱</div>
+          <h3 class="text-3xl font-jersey text-[#C72BAF]">Tu juego ideal: Roblox</h3>
+          <p class="text-sm text-gray-300 mt-2">Explora miles de experiencias de rol, simuladores, o diseña tu propio juego con Roblox Studio.</p>
+          <a href="#roblox" class="inline-block mt-4 text-xs bg-[#C72BAF] text-white px-4 py-2 rounded-lg font-bold">Ver más detalles</a>
+        `;
+      } else if (type === 'low-spec') {
+        content = `
+          <div class="text-3xl mb-2">🔥</div>
+          <h3 class="text-3xl font-jersey text-[#EB145F]">Tu juego ideal: Garena Free Fire</h3>
+          <p class="text-sm text-gray-300 mt-2">Está optimizado específicamente para funcionar de manera fluida en celulares de gama baja y media.</p>
+          <a href="#free-fire" class="inline-block mt-4 text-xs bg-[#EB145F] text-white px-4 py-2 rounded-lg font-bold">Ver más detalles</a>
+        `;
+      }
+
+      resultBox.innerHTML = content;
+    }
+  </script>
+</body>
+</html>
